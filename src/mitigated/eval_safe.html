@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Safe Eval Alternative</title>
+</head>
+<body>
+  <script>
+    function safeExecutor(input) {
+        const allowedFunctions = {
+            greet: () => alert("Hello!"),
+            bye: () => alert("Goodbye!")
+        };
+
+        if (allowedFunctions[input]) {
+            allowedFunctions[input]();
+        } else {
+            console.warn("Invalid action!");
+        }
+    }
+
+    // Simulate safe input
+    safeExecutor("greet");
+  </script>
+</body>
+</html>

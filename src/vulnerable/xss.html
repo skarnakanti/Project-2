@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vulnerable XSS</title>
+</head>
+<body>
+  <h2>Welcome Message</h2>
+  <div id="output"></div>
+  <script>
+    // Simulated user input (from URL, form, etc.)
+    let userInput = "<img src=x onerror=alert('Hacked!')>";
+    document.getElementById("output").innerHTML = "Welcome, " + userInput;
+  </script>
+</body>
+</html>

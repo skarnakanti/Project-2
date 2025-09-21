@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vulnerable Eval</title>
+</head>
+<body>
+  <script>
+    let userCode = "alert('Your cookies: ' + document.cookie)";
+    eval(userCode); // VULNERABLE
+  </script>
+</body>
+</html>
